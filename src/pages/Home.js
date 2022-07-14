@@ -28,9 +28,11 @@ const Home = () => {
             <tr>
               <th scope="col">#</th>
               <th scope="col">name</th>
-              <th scope="col">email</th>
-              <th scope="col">phone</th>
+              <th scope="col">Username</th>
               <th scope="col">city</th>
+              <th scope="col">zipcode</th>
+              <th scope="col">phone</th>
+              <th scope="col">company</th>
               <th scope="col">action</th>
             </tr>
           </thead>
@@ -40,9 +42,12 @@ const Home = () => {
               <tr key={i}>
                 <th scope="row">{ i + 1 }</th>
                 <td>{item.name}</td>
-                <td>{item.email}</td>
-                <td>{item.phone}</td>
+                <td>{item.username}</td>
                 <td>{item.address.city}</td>
+                <td>{item.address.zipcode}</td>
+                <td>{item.phone}</td>
+                <td>{item.company.name}</td>
+                
                 <td>
                   <Link to={`/user/${item.id}`}>
                     <button type="button" className="btn btn-outline-dark mr-1">view</button>

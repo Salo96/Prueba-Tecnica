@@ -5,7 +5,7 @@ import axios from 'axios';
 const Photos = () => {
     const baseUrl = "https://jsonplaceholder.typicode.com/";
     const [data, setData] = useState([]);
-    const [ currentPage, setCurrentPages ] = useState(1);
+    const [ currentPage ] = useState(1);
     const [ postPerPage ] = useState(28);
 
     useEffect(() => {
